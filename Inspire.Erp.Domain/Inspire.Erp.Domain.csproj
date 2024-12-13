@@ -1,0 +1,765 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Entities\InspireErpDBContext.cs" />
+    <Compile Remove="Entities\InspireERPNewContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Entities\AccountSettings.ts">
+      <CustomToolNamespace>Entities\AccountSettings.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\AccountsTransactions.ts">
+      <CustomToolNamespace>Entities\AccountsTransactions.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ActivityLog.ts">
+      <CustomToolNamespace>Entities\ActivityLog.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\AgeingTable.ts">
+      <CustomToolNamespace>Entities\AgeingTable.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\AllocationType.ts">
+      <CustomToolNamespace>Entities\AllocationType.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\AllocationVoucher.ts">
+      <CustomToolNamespace>Entities\AllocationVoucher.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\AllocationVoucherDetails.ts">
+      <CustomToolNamespace>Entities\AllocationVoucherDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\AssetDepDetails.ts">
+      <CustomToolNamespace>Entities\AssetDepDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\AssetMaster.ts">
+      <CustomToolNamespace>Entities\AssetMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\AutoCodes.ts">
+      <CustomToolNamespace>Entities\AutoCodes.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\AvCreditNote.ts">
+      <CustomToolNamespace>Entities\AvCreditNote.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\AvCreditNoteDetails.ts">
+      <CustomToolNamespace>Entities\AvCreditNoteDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\AvDebitNote.ts">
+      <CustomToolNamespace>Entities\AvDebitNote.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\AvDebitNoteDetails.ts">
+      <CustomToolNamespace>Entities\AvDebitNoteDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\AvIssueVoucher.ts">
+      <CustomToolNamespace>Entities\AvIssueVoucher.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\AvIssueVoucherDetails.ts">
+      <CustomToolNamespace>Entities\AvIssueVoucherDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\AvIssueVoucherDetailsReturn.ts">
+      <CustomToolNamespace>Entities\AvIssueVoucherDetailsReturn.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\AvIssueVoucherReturn.ts">
+      <CustomToolNamespace>Entities\AvIssueVoucherReturn.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\BankMaster.ts">
+      <CustomToolNamespace>Entities\BankMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\BankPaymentVoucher.ts">
+      <CustomToolNamespace>Entities\BankPaymentVoucher.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\BankPaymentVoucherDetails.ts">
+      <CustomToolNamespace>Entities\BankPaymentVoucherDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\BankReceiptVoucher.ts">
+      <CustomToolNamespace>Entities\BankReceiptVoucher.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\BankReceiptVoucherDetails.ts">
+      <CustomToolNamespace>Entities\BankReceiptVoucherDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\BaseEntity.ts">
+      <CustomToolNamespace>Entities\BaseEntity.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\BatchBarCodes.ts">
+      <CustomToolNamespace>Entities\BatchBarCodes.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\BatchMaster.ts">
+      <CustomToolNamespace>Entities\BatchMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\BudgetMaster.ts">
+      <CustomToolNamespace>Entities\BudgetMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\BusinessTypeMaster.ts">
+      <CustomToolNamespace>Entities\BusinessTypeMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\CardDetails.ts">
+      <CustomToolNamespace>Entities\CardDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\CityMaster.ts">
+      <CustomToolNamespace>Entities\CityMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\CodeMaster.ts">
+      <CustomToolNamespace>Entities\CodeMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\CommonDocuments.ts">
+      <CustomToolNamespace>Entities\CommonDocuments.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ContraVoucher.ts">
+      <CustomToolNamespace>Entities\ContraVoucher.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ContraVoucherDetails.ts">
+      <CustomToolNamespace>Entities\ContraVoucherDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\CostCenterMaster.ts">
+      <CustomToolNamespace>Entities\CostCenterMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\CountryMaster.ts">
+      <CustomToolNamespace>Entities\CountryMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\CurrencyMaster.ts">
+      <CustomToolNamespace>Entities\CurrencyMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\CustomerContacts.ts">
+      <CustomToolNamespace>Entities\CustomerContacts.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\CustomerDeliveryNote.ts">
+      <CustomToolNamespace>Entities\CustomerDeliveryNote.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\CustomerDeliveryNoteDetails.ts">
+      <CustomToolNamespace>Entities\CustomerDeliveryNoteDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\CustomerMaster.ts">
+      <CustomToolNamespace>Entities\CustomerMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\CustomerOrder.ts">
+      <CustomToolNamespace>Entities\CustomerOrder.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\CustomerOrderDetails.ts">
+      <CustomToolNamespace>Entities\CustomerOrderDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\CustomerOrderRegister.ts">
+      <CustomToolNamespace>Entities\CustomerOrderRegister.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\CustomerPurchaseOrder.ts">
+      <CustomToolNamespace>Entities\CustomerPurchaseOrder.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\CustomerPurchaseOrderDetails.ts">
+      <CustomToolNamespace>Entities\CustomerPurchaseOrderDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\CustomerQuotation.ts">
+      <CustomToolNamespace>Entities\CustomerQuotation.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\CustomerQuotationDetails.ts">
+      <CustomToolNamespace>Entities\CustomerQuotationDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\CustomerType.ts">
+      <CustomToolNamespace>Entities\CustomerType.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\CutomerType.ts">
+      <CustomToolNamespace>Entities\CutomerType.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\DamageDetails.ts">
+      <CustomToolNamespace>Entities\DamageDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\DamageMaster.ts">
+      <CustomToolNamespace>Entities\DamageMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\DeliveryOrderVoucherBatchDetails.ts">
+      <CustomToolNamespace>Entities\DeliveryOrderVoucherBatchDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\DepartmentMaster.ts">
+      <CustomToolNamespace>Entities\DepartmentMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\DocumentImages.ts">
+      <CustomToolNamespace>Entities\DocumentImages.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\DriverMaster.ts">
+      <CustomToolNamespace>Entities\DriverMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\EnquiryDetails.ts">
+      <CustomToolNamespace>Entities\EnquiryDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\EnquiryMaster.ts">
+      <CustomToolNamespace>Entities\EnquiryMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\EnquiryStatus.ts">
+      <CustomToolNamespace>Entities\EnquiryStatus.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\EqnuiryAbout.ts">
+      <CustomToolNamespace>Entities\EqnuiryAbout.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\EquipmentTools.ts">
+      <CustomToolNamespace>Entities\EquipmentTools.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ErrorLog.ts">
+      <CustomToolNamespace>Entities\ErrorLog.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\FinalStock.ts">
+      <CustomToolNamespace>Entities\FinalStock.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\FinancialPeriods.ts">
+      <CustomToolNamespace>Entities\FinancialPeriods.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\FormCategory.ts">
+      <CustomToolNamespace>Entities\FormCategory.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\FormNames.ts">
+      <CustomToolNamespace>Entities\FormNames.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\GeneralPurchaseOrder.ts">
+      <CustomToolNamespace>Entities\GeneralPurchaseOrder.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\GeneralPurchaseOrderDetails.ts">
+      <CustomToolNamespace>Entities\GeneralPurchaseOrderDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\GeneralSettings.ts">
+      <CustomToolNamespace>Entities\GeneralSettings.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\GeneralSettings1.ts">
+      <CustomToolNamespace>Entities\GeneralSettings1.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\GenericMaster.ts">
+      <CustomToolNamespace>Entities\GenericMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\GlobalAccountsTable.ts">
+      <CustomToolNamespace>Entities\GlobalAccountsTable.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\GoodsDelivery.ts">
+      <CustomToolNamespace>Entities\GoodsDelivery.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\GoodsDeliveryDetails.ts">
+      <CustomToolNamespace>Entities\GoodsDeliveryDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\GrnPoDetails.ts">
+      <CustomToolNamespace>Entities\GrnPoDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\HappyHour.ts">
+      <CustomToolNamespace>Entities\HappyHour.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\HappyHourDeatils.ts">
+      <CustomToolNamespace>Entities\HappyHourDeatils.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\InspireErpDBContext.ts">
+      <CustomToolNamespace>Entities\InspireErpDBContext.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\Invoice.ts">
+      <CustomToolNamespace>Entities\Invoice.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\InvoiceAirDetails.ts">
+      <CustomToolNamespace>Entities\InvoiceAirDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\InvoiceAirMaster.ts">
+      <CustomToolNamespace>Entities\InvoiceAirMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\InvoiceDetails.ts">
+      <CustomToolNamespace>Entities\InvoiceDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\InvoiceDetailsWestern.ts">
+      <CustomToolNamespace>Entities\InvoiceDetailsWestern.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\InvoiceSeaDetails.ts">
+      <CustomToolNamespace>Entities\InvoiceSeaDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\InvoiceSeaMaster.ts">
+      <CustomToolNamespace>Entities\InvoiceSeaMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\InvoiceWestern.ts">
+      <CustomToolNamespace>Entities\InvoiceWestern.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ItemImages.ts">
+      <CustomToolNamespace>Entities\ItemImages.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ItemMaster.ts">
+      <CustomToolNamespace>Entities\ItemMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ItemPriceLevelDetails.ts">
+      <CustomToolNamespace>Entities\ItemPriceLevelDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ItemStockType.ts">
+      <CustomToolNamespace>Entities\ItemStockType.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ItemSupplierDetails.ts">
+      <CustomToolNamespace>Entities\ItemSupplierDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\JobBudgetDetails.ts">
+      <CustomToolNamespace>Entities\JobBudgetDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\JobCordinator.ts">
+      <CustomToolNamespace>Entities\JobCordinator.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\JobCostEntry.ts">
+      <CustomToolNamespace>Entities\JobCostEntry.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\JobDetails.ts">
+      <CustomToolNamespace>Entities\JobDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\JobInvoice.ts">
+      <CustomToolNamespace>Entities\JobInvoice.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\JobInvoiceDetails.ts">
+      <CustomToolNamespace>Entities\JobInvoiceDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\JobMaster.ts">
+      <CustomToolNamespace>Entities\JobMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\JobMaster1.ts">
+      <CustomToolNamespace>Entities\JobMaster1.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\JobOrder.ts">
+      <CustomToolNamespace>Entities\JobOrder.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\JobOrderDetails.ts">
+      <CustomToolNamespace>Entities\JobOrderDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\JournalInvoiceDetails.ts">
+      <CustomToolNamespace>Entities\JournalInvoiceDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\JournalInvoiceMaster.ts">
+      <CustomToolNamespace>Entities\JournalInvoiceMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\JournalSalesVoucher.ts">
+      <CustomToolNamespace>Entities\JournalSalesVoucher.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\JournalSalesVoucherDetails.ts">
+      <CustomToolNamespace>Entities\JournalSalesVoucherDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\JournalVoucher.ts">
+      <CustomToolNamespace>Entities\JournalVoucher.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\JournalVoucherDetails.ts">
+      <CustomToolNamespace>Entities\JournalVoucherDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\LanguageMaster.ts">
+      <CustomToolNamespace>Entities\LanguageMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\LinkAccount.ts">
+      <CustomToolNamespace>Entities\LinkAccount.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\LocationMaster.ts">
+      <CustomToolNamespace>Entities\LocationMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ManufactureGoodEntryDetails.ts">
+      <CustomToolNamespace>Entities\ManufactureGoodEntryDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ManufactureGoodsEntryMaster.ts">
+      <CustomToolNamespace>Entities\ManufactureGoodsEntryMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ManufactureMaster.ts">
+      <CustomToolNamespace>Entities\ManufactureMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\MasterAccountsTable.ts">
+      <CustomToolNamespace>Entities\MasterAccountsTable.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\MasterAccountsTableDelete.ts">
+      <CustomToolNamespace>Entities\MasterAccountsTableDelete.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\MaterialsMaster.ts">
+      <CustomToolNamespace>Entities\MaterialsMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\MenuMaster.ts">
+      <CustomToolNamespace>Entities\MenuMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ModelMaster.ts">
+      <CustomToolNamespace>Entities\ModelMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\NatureOfBusiness.ts">
+      <CustomToolNamespace>Entities\NatureOfBusiness.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\OldBsMaster.ts">
+      <CustomToolNamespace>Entities\OldBsMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\OldBsMasterDetails.ts">
+      <CustomToolNamespace>Entities\OldBsMasterDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\OpeningStock.ts">
+      <CustomToolNamespace>Entities\OpeningStock.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\OpeningVoucherDetails.ts">
+      <CustomToolNamespace>Entities\OpeningVoucherDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\OpeningVoucherMaster.ts">
+      <CustomToolNamespace>Entities\OpeningVoucherMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\OpStock.ts">
+      <CustomToolNamespace>Entities\OpStock.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\OptionsMaster.ts">
+      <CustomToolNamespace>Entities\OptionsMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\OrderTracking.ts">
+      <CustomToolNamespace>Entities\OrderTracking.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\PackageMaster.ts">
+      <CustomToolNamespace>Entities\PackageMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\Packages.ts">
+      <CustomToolNamespace>Entities\Packages.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\PaymentVoucher.ts">
+      <CustomToolNamespace>Entities\PaymentVoucher.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\PaymentVoucherDetails.ts">
+      <CustomToolNamespace>Entities\PaymentVoucherDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\PdcDetails.ts">
+      <CustomToolNamespace>Entities\PdcDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\PdcVoucher.ts">
+      <CustomToolNamespace>Entities\PdcVoucher.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\PdcVoucherDetails.ts">
+      <CustomToolNamespace>Entities\PdcVoucherDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\PosStationSettings.ts">
+      <CustomToolNamespace>Entities\PosStationSettings.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\PrApprovalDetails.ts">
+      <CustomToolNamespace>Entities\PrApprovalDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\PriceLevelMaster.ts">
+      <CustomToolNamespace>Entities\PriceLevelMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ProductList.ts">
+      <CustomToolNamespace>Entities\ProductList.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ProformaInvoice.ts">
+      <CustomToolNamespace>Entities\ProformaInvoice.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ProformaInvoiceDetails.ts">
+      <CustomToolNamespace>Entities\ProformaInvoiceDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ProgramSettings.ts">
+      <CustomToolNamespace>Entities\ProgramSettings.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ProgressiveInvoice.ts">
+      <CustomToolNamespace>Entities\ProgressiveInvoice.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ProgressiveInvoiceDetails.ts">
+      <CustomToolNamespace>Entities\ProgressiveInvoiceDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ProjectDescriptionMaster.ts">
+      <CustomToolNamespace>Entities\ProjectDescriptionMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\PrUser.ts">
+      <CustomToolNamespace>Entities\PrUser.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\PurchaseExpense.ts">
+      <CustomToolNamespace>Entities\PurchaseExpense.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\PurchaseJournalVoucher.ts">
+      <CustomToolNamespace>Entities\PurchaseJournalVoucher.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\PurchaseJournalVoucherDetails.ts">
+      <CustomToolNamespace>Entities\PurchaseJournalVoucherDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\PurchaseOrder.ts">
+      <CustomToolNamespace>Entities\PurchaseOrder.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\PurchaseOrderDetails.ts">
+      <CustomToolNamespace>Entities\PurchaseOrderDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\PurchaseRequisition.ts">
+      <CustomToolNamespace>Entities\PurchaseRequisition.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\PurchaseRequisitionDetails.ts">
+      <CustomToolNamespace>Entities\PurchaseRequisitionDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\PurchaseReturnVoucher.ts">
+      <CustomToolNamespace>Entities\PurchaseReturnVoucher.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\PurchaseReturnVoucherDetails.ts">
+      <CustomToolNamespace>Entities\PurchaseReturnVoucherDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\PurchaseVoucher.ts">
+      <CustomToolNamespace>Entities\PurchaseVoucher.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\PurchaseVoucherDetails.ts">
+      <CustomToolNamespace>Entities\PurchaseVoucherDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\PurOrderRegister.ts">
+      <CustomToolNamespace>Entities\PurOrderRegister.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\Qtemplates.ts">
+      <CustomToolNamespace>Entities\Qtemplates.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\Quotation.ts">
+      <CustomToolNamespace>Entities\Quotation.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\QuotationDetails.ts">
+      <CustomToolNamespace>Entities\QuotationDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\RackMaster.ts">
+      <CustomToolNamespace>Entities\RackMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ReceiptVoucherDetails.ts">
+      <CustomToolNamespace>Entities\ReceiptVoucherDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ReceiptVoucherMaster.ts">
+      <CustomToolNamespace>Entities\ReceiptVoucherMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ReconciliationVoucher.ts">
+      <CustomToolNamespace>Entities\ReconciliationVoucher.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ReconciliationVoucherDetails.ts">
+      <CustomToolNamespace>Entities\ReconciliationVoucherDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ReportType.ts">
+      <CustomToolNamespace>Entities\ReportType.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\RfqEntry.ts">
+      <CustomToolNamespace>Entities\RfqEntry.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\RfqEntryDetails.ts">
+      <CustomToolNamespace>Entities\RfqEntryDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\SalesJournal.ts">
+      <CustomToolNamespace>Entities\SalesJournal.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\SalesJournalDetails.ts">
+      <CustomToolNamespace>Entities\SalesJournalDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\SalesJournalVoucher.ts">
+      <CustomToolNamespace>Entities\SalesJournalVoucher.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\SalesJournalVoucherDetails.ts">
+      <CustomToolNamespace>Entities\SalesJournalVoucherDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\SalesManMaster.ts">
+      <CustomToolNamespace>Entities\SalesManMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\SalesReturnDetails.ts">
+      <CustomToolNamespace>Entities\SalesReturnDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\SalesReturnMaster.ts">
+      <CustomToolNamespace>Entities\SalesReturnMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\SalesVoucher.ts">
+      <CustomToolNamespace>Entities\SalesVoucher.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\SalesVoucherBatchDetials.ts">
+      <CustomToolNamespace>Entities\SalesVoucherBatchDetials.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\SalesVoucherDetails.ts">
+      <CustomToolNamespace>Entities\SalesVoucherDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\ServiceMaster.ts">
+      <CustomToolNamespace>Entities\ServiceMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\SiteMaster.ts">
+      <CustomToolNamespace>Entities\SiteMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\SplitPaymentDetails.ts">
+      <CustomToolNamespace>Entities\SplitPaymentDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\StaffMaster.ts">
+      <CustomToolNamespace>Entities\StaffMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\StationMaster.ts">
+      <CustomToolNamespace>Entities\StationMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\StockAdjustment.ts">
+      <CustomToolNamespace>Entities\StockAdjustment.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\StockAdjustmentVoucher.ts">
+      <CustomToolNamespace>Entities\StockAdjustmentVoucher.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\StockAdjustmentVoucherDetails.ts">
+      <CustomToolNamespace>Entities\StockAdjustmentVoucherDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\StockEditPriceUpdate.ts">
+      <CustomToolNamespace>Entities\StockEditPriceUpdate.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\StockExchangeDetails.ts">
+      <CustomToolNamespace>Entities\StockExchangeDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\StockExchangeMaster.ts">
+      <CustomToolNamespace>Entities\StockExchangeMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\StockInwardDetails.ts">
+      <CustomToolNamespace>Entities\StockInwardDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\StockInwardMaster.ts">
+      <CustomToolNamespace>Entities\StockInwardMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\StockRegister.ts">
+      <CustomToolNamespace>Entities\StockRegister.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\StockReport.ts">
+      <CustomToolNamespace>Entities\StockReport.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\StockReqDetails.ts">
+      <CustomToolNamespace>Entities\StockReqDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\StockReservation.ts">
+      <CustomToolNamespace>Entities\StockReservation.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\StockReservationDetails.ts">
+      <CustomToolNamespace>Entities\StockReservationDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\StockStatement.ts">
+      <CustomToolNamespace>Entities\StockStatement.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\StockTransfer.ts">
+      <CustomToolNamespace>Entities\StockTransfer.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\StockTransferDetails.ts">
+      <CustomToolNamespace>Entities\StockTransferDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\StockTransferDetailsJobWise.ts">
+      <CustomToolNamespace>Entities\StockTransferDetailsJobWise.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\StockTransferJobWise.ts">
+      <CustomToolNamespace>Entities\StockTransferJobWise.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\StoreReqMaster.ts">
+      <CustomToolNamespace>Entities\StoreReqMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\SupplierContacts.ts">
+      <CustomToolNamespace>Entities\SupplierContacts.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\SupplierDetails.ts">
+      <CustomToolNamespace>Entities\SupplierDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\SupplierPurchaseOrder.ts">
+      <CustomToolNamespace>Entities\SupplierPurchaseOrder.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\SupplierPurchaseOrderDetails.ts">
+      <CustomToolNamespace>Entities\SupplierPurchaseOrderDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\SupplierQuotation.ts">
+      <CustomToolNamespace>Entities\SupplierQuotation.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\SupplierQuotationDetails.ts">
+      <CustomToolNamespace>Entities\SupplierQuotationDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\Suppliers.ts">
+      <CustomToolNamespace>Entities\Suppliers.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\SuppliersMaster.ts">
+      <CustomToolNamespace>Entities\SuppliersMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\SuppQuotationExpenseDetails.ts">
+      <CustomToolNamespace>Entities\SuppQuotationExpenseDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TempAgeingRpt.ts">
+      <CustomToolNamespace>Entities\TempAgeingRpt.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TempAssetDepCalc.ts">
+      <CustomToolNamespace>Entities\TempAssetDepCalc.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TempBalanceSheet.ts">
+      <CustomToolNamespace>Entities\TempBalanceSheet.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TempCashBook.ts">
+      <CustomToolNamespace>Entities\TempCashBook.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TempCashFlow.ts">
+      <CustomToolNamespace>Entities\TempCashFlow.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TempDayBook.ts">
+      <CustomToolNamespace>Entities\TempDayBook.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TempJobCostSummary.ts">
+      <CustomToolNamespace>Entities\TempJobCostSummary.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TempMisStatement.ts">
+      <CustomToolNamespace>Entities\TempMisStatement.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TempPlforecast.ts">
+      <CustomToolNamespace>Entities\TempPlforecast.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TempPlwithDate.ts">
+      <CustomToolNamespace>Entities\TempPlwithDate.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TempProfitLoss.ts">
+      <CustomToolNamespace>Entities\TempProfitLoss.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TempSalesJournalDetails.ts">
+      <CustomToolNamespace>Entities\TempSalesJournalDetails.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TempStatement.ts">
+      <CustomToolNamespace>Entities\TempStatement.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TempStatementVat.ts">
+      <CustomToolNamespace>Entities\TempStatementVat.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TempStkMovement.ts">
+      <CustomToolNamespace>Entities\TempStkMovement.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TempStockBaseUnit.ts">
+      <CustomToolNamespace>Entities\TempStockBaseUnit.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TempStockLedger.ts">
+      <CustomToolNamespace>Entities\TempStockLedger.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TempStockLedger1.ts">
+      <CustomToolNamespace>Entities\TempStockLedger1.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TempStockLedgerBatch.ts">
+      <CustomToolNamespace>Entities\TempStockLedgerBatch.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TempStockpos.ts">
+      <CustomToolNamespace>Entities\TempStockpos.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TempStockPostail.ts">
+      <CustomToolNamespace>Entities\TempStockPostail.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TermsAndCondition.ts">
+      <CustomToolNamespace>Entities\TermsAndCondition.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TrackingRegister.ts">
+      <CustomToolNamespace>Entities\TrackingRegister.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TrialBalance.ts">
+      <CustomToolNamespace>Entities\TrialBalance.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\TypeMaster.ts">
+      <CustomToolNamespace>Entities\TypeMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\UnitMaster.ts">
+      <CustomToolNamespace>Entities\UnitMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\UserFile.ts">
+      <CustomToolNamespace>Entities\UserFile.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\UserPermission.ts">
+      <CustomToolNamespace>Entities\UserPermission.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\UserTracking.ts">
+      <CustomToolNamespace>Entities\UserTracking.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\UserWebAccSettings.ts">
+      <CustomToolNamespace>Entities\UserWebAccSettings.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\VendorMaster.ts">
+      <CustomToolNamespace>Entities\VendorMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\VouchersNumbers.ts">
+      <CustomToolNamespace>Entities\VouchersNumbers.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\WorkGroupMaster.ts">
+      <CustomToolNamespace>Entities\WorkGroupMaster.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\WorkGroupPermissions.ts">
+      <CustomToolNamespace>Entities\WorkGroupPermissions.cs</CustomToolNamespace>
+    </None>
+    <None Update="Entities\WorkPeriods.ts">
+      <CustomToolNamespace>Entities\WorkPeriods.cs</CustomToolNamespace>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DTO\Work Group Permission\" />
+  </ItemGroup>
+
+</Project>

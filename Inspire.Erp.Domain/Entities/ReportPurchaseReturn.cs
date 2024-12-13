@@ -1,0 +1,103 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace Inspire.Erp.Domain.Entities
+{
+    public partial class ReportPurchaseReturn
+    {
+        public decimal PurchaseReturnId { get; set; }
+        public string PurchaseReturnNo { get; set; }
+        public DateTime? PurchaseReturnDate { get; set; }
+        public string PurchaseReturnType { get; set; }
+        public decimal? PurchaseReturnPartyId { get; set; }
+        public string PurchaseReturnPartyName { get; set; }
+        public string PurchaseReturnPartyAddress { get; set; }
+        public string PurchaseReturnPartyVatNo { get; set; }
+        public string PurchaseReturnRefNo { get; set; }
+        public string PurchaseReturnSupInvNo { get; set; }
+        public string PurchaseReturnGrno { get; set; }
+        public DateTime? PurchaseReturnGrdate { get; set; }
+        public string PurchaseReturnLpono { get; set; }
+        public DateTime? PurchaseReturnLpodate { get; set; }
+        public string PurchaseReturnQtnNo { get; set; }
+        public DateTime? PurchaseReturnQtnDate { get; set; }
+        public string PurchaseReturnDescription { get; set; }
+        public bool? PurchaseReturnExcludeVat { get; set; }
+        public string PurchaseReturnPono { get; set; }
+        public string PurchaseReturnBatchCode { get; set; }
+        public string PurchaseReturnDayBookNo { get; set; }
+        public int? PurchaseReturnLocationId { get; set; }
+        public long? PurchaseReturnUserId { get; set; }
+        public int? PurchaseReturnCurrencyId { get; set; }
+        public int? PurchaseReturnCompanyId { get; set; }
+        public int? PurchaseReturnJobId { get; set; }
+        public decimal? PurchaseReturnFsno { get; set; }
+        public decimal? PurchaseReturnFcRate { get; set; }
+        public string PurchaseReturnStatus { get; set; }
+        public decimal? PurchaseReturnTotalGrossAmount { get; set; }
+        public decimal? PurchaseReturnTotalItemDisAmount { get; set; }
+        public decimal? PurchaseReturnTotalActualAmount { get; set; }
+        public decimal? PurchaseReturnTotalDisPer { get; set; }
+        public decimal? PurchaseReturnTotalDisAmount { get; set; }
+        public decimal? PurchaseReturnVatAmt { get; set; }
+        public decimal? PurchaseReturnVatPer { get; set; }
+        public string PurchaseReturnVatRoundSign { get; set; }
+        public decimal? PurchaseReturnVatRountAmt { get; set; }
+        public decimal? PurchaseReturnNetDisAmount { get; set; }
+        public decimal? PurchaseReturnNetAmount { get; set; }
+        public decimal? PurchaseReturnTransportCost { get; set; }
+        public decimal? PurchaseReturnHandlingcharges { get; set; }
+        public string PurchaseReturnIssueId { get; set; }
+        public bool? PurchaseReturnJobDirectPur { get; set; }
+        public bool? PurchaseReturnDelStatus { get; set; }
+        public string CurrencyMasterCurrencyName { get; set; }
+        public string SuppliersMasterSupplierName { get; set; }
+        public string SuppliersMasterSupplierContactPerson { get; set; }
+        public int? SuppliersMasterSupplierCountryId { get; set; }
+        public int? SuppliersMasterSupplierCityId { get; set; }
+        public string SuppliersMasterSupplierMobile { get; set; }
+        public string SuppliersMasterSupplierRemarks { get; set; }
+        public string SuppliersMasterSupplierVatNo { get; set; }
+        public string CountryMasterCountryName { get; set; }
+        public int? CityMasterCityId { get; set; }
+        public string UnitMasterUnitShortName { get; set; }
+        public string ItemMasterPartNo { get; set; }
+        public string ItemMasterItemName { get; set; }
+        public decimal? Expr1 { get; set; }
+        public string PurchaseReturnDetailsNo { get; set; }
+        public decimal? PurchaseReturnDetailsSno { get; set; }
+        public int? PurchaseReturnDetailsMatId { get; set; }
+        public string PurchaseReturnDetailsItemName { get; set; }
+        public int? PurchaseReturnDetailsUnitId { get; set; }
+        public string PurchaseReturnDetailsUnitName { get; set; }
+        public string PurchaseReturnDetailsBatchCode { get; set; }
+        public bool? PurchaseReturnDetailsDelStatus { get; set; }
+        public decimal? PurchaseReturnDetailsSalesPrice { get; set; }
+        public int? PurchaseReturnDetailsQtndId { get; set; }
+        public int? PurchaseReturnDetailsQtnId { get; set; }
+        public int? PurchaseReturnDetailsPodId { get; set; }
+        public int? PurchaseReturnDetailsPoId { get; set; }
+        public int? PurchaseReturnDetailsPrdId { get; set; }
+        public int? PurchaseReturnDetailsPrId { get; set; }
+        public int? PurchaseReturnDetailsRfqdId { get; set; }
+        public int? PurchaseReturnDetailsRfqId { get; set; }
+        public int? PurchaseReturnDetailsPurId { get; set; }
+        public int? PurchaseReturnDetailsPurdId { get; set; }
+        public bool? PurchaseReturnDetailsIsEdit { get; set; }
+        public string PurchaseReturnDetailsRemarks { get; set; }
+        public decimal? PurchaseReturnDetailsNetAmt { get; set; }
+        public decimal? PurchaseReturnDetailsVatAmt { get; set; }
+        public decimal? PurchaseReturnDetailsVatPer { get; set; }
+        public decimal? PurchaseReturnDetailsActualAmount { get; set; }
+        public decimal? PurchaseReturnDetailsDiscAmount { get; set; }
+        public decimal? PurchaseReturnDetailsGrossAmount { get; set; }
+        public decimal? PurchaseReturnDetailsRate { get; set; }
+        public decimal? PurchaseReturnDetailsQuantity { get; set; }
+        public DateTime? PurchaseReturnDetailsExpDate { get; set; }
+        public DateTime? PurchaseReturnDetailsManfDate { get; set; }
+        public string SuppliersMasterSupplierTel1 { get; set; }
+        public string SuppliersMasterSupplierFax { get; set; }
+        public string LocationMasterLocationName { get; set; }
+        public string JobMasterJobName { get; set; }
+    }
+}
